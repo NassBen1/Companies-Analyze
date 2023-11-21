@@ -31,5 +31,17 @@ def OpenDocsAndTagging(link):
 
 if __name__ == "__main__" :
 
-    #Ouverture des fichiers et concaténation de tous les dataframes du dossier Data
+    #Ouverture des fichiers et concaténation de tous les dataframes du dossier Data (Exercice 1)
     df = OpenDocsAndTagging("data")
+
+    #Exercice 2
+    #Afficher les premières lignes du dataframe
+    print("Voici les premières lignes du nouveau Dataframe:\n")
+    print(df.head())
+    # Afficher le type des valeurs des colonnes
+    print("Voici le type des valeurs des colonnes:\n")
+    print(df.dtypes)
+
+
+
+
