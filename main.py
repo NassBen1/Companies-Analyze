@@ -42,7 +42,14 @@ def VisualisationEnBarre(data):
     fig = px.bar(data, x='Launch Year', y='Number of Active Products', labels={'Launch Year': 'Année de Lancement', 'Number of Active Products': 'Nombre de Produits Actifs'})
     fig.show()
 
-
+#Fonction qui permet de trouver le produit avec la plus longue durée depuis son lancement
+def LongestDurationProduct(df) :
+    current_year = 2023  # Mise à jour avec l'année actuelle
+    df['Launch Year'] = df['Launch Year'].str.extract('(\d+)').astype(float)
+    df['Years Since Launch'] = current_year - df['Launch Year']
+    longest_duration_product = df[df['Years Since Launch'] == df['Years Since Launch'].max()]
+    print("\n\n Voici le produit le plus ancien :\n")
+    print(longest_duration_product[['Product Name', 'Launch Year', 'Years Since Launch']])
 
 
 if __name__ == "__main__" :
@@ -61,6 +68,11 @@ if __name__ == "__main__" :
     #Compter le nombre de produits actifs pour chaque année de lancement. (Le mieux ici serait une visualisation que je vais effectuer en utilisant la librairie Plotly)
     active_products = CountActivePerYear(df)
     VisualisationEnBarre(active_products)
+
+    #Appel de la fonction qui cherche le produit le plus vieux
+    LongestDurationProduct(df)
+
+
 
 
 
