@@ -44,8 +44,11 @@ def VisualisationEnBarre(data):
 
 #Fonction qui permet de trouver le produit avec la plus longue durée depuis son lancement
 def LongestDurationProduct(df) :
+
+
     current_year = 2023  # Mise à jour avec l'année actuelle
-    df['Launch Year'] = df['Launch Year'].str.extract('(\d+)').astype(float)
+    df = df[df['Launch Year'].astype(str).str.match(r'^\d{4}$')]
+    df['Launch Year'] = df['Launch Year'].astype(int)
     df['Years Since Launch'] = current_year - df['Launch Year']
     longest_duration_product = df[df['Years Since Launch'] == df['Years Since Launch'].max()]
     print("\n\n Voici le produit le plus ancien :\n")
