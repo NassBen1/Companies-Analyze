@@ -54,6 +54,28 @@ def LongestDurationProduct(df) :
     print("\n\n Voici le produit le plus ancien :\n")
     print(longest_duration_product[['Product Name', 'Launch Year', 'Years Since Launch']])
 
+#Fonction permettant la visualistaion des question posées à l'exercice 3
+def Visualize(df) :
+
+    #First Question
+    df_brand_count = df.groupby('Brand')['Status'].count().reset_index()
+    fig_bar = px.bar(df_brand_count, x='Brand', y='Status', title='Nombre de produits actifs par Marque')
+    fig_bar.show()
+
+    #Second Question
+    df_brand_distribution = df['Brand'].value_counts().reset_index()
+    df_brand_distribution.columns = ['Brand', 'Count']
+    fig_pie = px.pie(df_brand_distribution, values='Count', names='Brand', title='Répartition des produits par Marque')
+    fig_pie.show()
+
+    #Last Question
+    pivot_table = df.pivot_table(index='Launch Year', columns='Brand', values='Status', aggfunc='count').fillna(0)
+    pivot_table_reset = pivot_table.reset_index()
+    fig_bar_line = px.bar(pivot_table_reset, x='Launch Year', y=pivot_table_reset.columns[1:],
+                          title='Répartition des produits actifs par année de lancement et par Marque')
+    fig_bar_line.update_layout(barmode='stack')  # Mettre les barres en mode 'stack' pour les empiler
+    fig_bar_line.show()
+
 
 if __name__ == "__main__" :
 
@@ -74,6 +96,9 @@ if __name__ == "__main__" :
 
     #Appel de la fonction qui cherche le produit le plus vieux
     LongestDurationProduct(df)
+
+    #Exercice 3
+    Visualize(df)
 
 
 
