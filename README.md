@@ -22,5 +22,4 @@ Exercice 3 : Visualisation des données
 Exercice 4 : Analyse supplémentaire
 
     Identifier les années avec le plus grand nombre de lancements de produits.
-    Comparer les tendances de lancement de produits dans différentes catégories au fil des années.
-    Identifier si certaines catégories de produits ont été plus populaires que d'autres à certains moments.
+    

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af45e3b1-9c4b-470f-a070-d3a0dde615e0" name="Changes" comment="Avancée sur Exercice 2 avec affichage PyPlot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +41,6 @@
       <module name="Analyse Companies" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="C:\Users\benna\Desktop\Data Training\Companies-Analyze\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -96,6 +93,7 @@
       <workItem from="1700749823212" duration="3295000" />
       <workItem from="1700768574880" duration="10556000" />
       <workItem from="1700847866607" duration="1233000" />
+      <workItem from="1701117685568" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="Avancée sur Exercice 2">
       <created>1700605431492</created>
