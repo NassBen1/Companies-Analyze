@@ -76,6 +76,12 @@ def Visualize(df) :
     fig_bar_line.update_layout(barmode='stack')  # Mettre les barres en mode 'stack' pour les empiler
     fig_bar_line.show()
 
+def FindMaxYearProducts(df) :
+    launch_count = df['Launch Year'].value_counts()
+    max_launch_years = launch_count[launch_count == launch_count.max()]
+    print("\n\nAnnées avec le plus grand nombre de lancements :")
+    print(max_launch_years)
+
 
 if __name__ == "__main__" :
 
@@ -99,6 +105,9 @@ if __name__ == "__main__" :
 
     #Exercice 3
     Visualize(df)
+
+    #Analyse supplémentaire
+    FindMaxYearProducts(df)
 
 
 
