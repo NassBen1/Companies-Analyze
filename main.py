@@ -109,6 +109,9 @@ if __name__ == "__main__" :
     #Analyse supplémentaire
     FindMaxYearProducts(df)
 
+    df.to_csv("data/Fichiers de Sortie/Companies Analyse.csv", index=False)
+    print("Le fichier de suivi a été généré avec succès !")
+
 
 
 

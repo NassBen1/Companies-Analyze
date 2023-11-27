@@ -23,3 +23,5 @@ Exercice 4 : Analyse supplémentaire
 
     Identifier les années avec le plus grand nombre de lancements de produits.
     
+
+Visualisations effectués sur Power BI à retrouver dans le dossier Visualisations
